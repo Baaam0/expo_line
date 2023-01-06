@@ -13,11 +13,11 @@ export default function Home() {
       </Head>
 
       <header className={styles.head}>
-        <img src='/translink_logo.png' alt="translink blue logo" height='60px' />
+        <Image src="/translink_logo.png" alt="translink blue logo" height={50} width={100} />
       </header>
 
       <main className={styles.main}>
-        <h1 style={{color: '#183152'}}>Expo line Stations</h1>
+        <h1 style={{color: "#183152"}}>Expo line Stations</h1>
         <div className={styles.mapCont}>
         <Map/>
         </div>
@@ -25,7 +25,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
           <div style={{flexGrow: 2}}>
-          <img src='/translink_logo.png' alt="translink blue logo" height='80px' />
+          <Image src="/translink_logo.png" alt="translink blue logo" height={80} width={200} />
             <p>Metro Vancouver's transportation network, serving residents and visitors with public transit, major roads, bridges and Trip Planning.</p>
           </div>
           <div style={{flexGrow: 1}}>
