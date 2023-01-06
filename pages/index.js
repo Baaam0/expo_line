@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Map from '../components/Map'
 
 export default function Home() {
   return (
@@ -11,59 +12,47 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className={styles.head}>
+        <img src='/translink_logo.png' alt="translink blue logo" height='60px' />
+      </header>
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <h1 style={{color: '#183152'}}>Expo line Stations</h1>
+        <div className={styles.mapCont}>
+        <Map/>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+          <div style={{flexGrow: 2}}>
+          <img src='/translink_logo.png' alt="translink blue logo" height='80px' />
+            <p>Metro Vancouver's transportation network, serving residents and visitors with public transit, major roads, bridges and Trip Planning.</p>
+          </div>
+          <div style={{flexGrow: 1}}>
+            <ul>
+              <h3>Getting Around</h3>
+              <p>Transit Fares</p>
+              <p>Schedules</p>
+              <p>Rider Info</p>
+              <p>Transit Alerts</p>
+            </ul>
+          </div>
+          <div style={{flexGrow: 1}}>
+            <ul>
+              <h3>Resources</h3>
+              <p>Contact Us</p>
+              <p>Careers</p>
+            </ul>
+          </div>
+          <div style={{flexGrow: 1}}>
+            <ul>
+              <h3>Contact Us</h3>
+              <p>Call us at 604.953.3333</p>
+              <p>400-287 Nelson's Ct.,<br/> New Westminster, BC V3L0E7</p>
+            </ul>
+          </div>
       </footer>
+
     </div>
   )
 }
