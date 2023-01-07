@@ -2,16 +2,11 @@ import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import style from '../../styles/Home.module.css'
-
-
-
 import { MapContainer, TileLayer, Marker, Popup, Polyline, CircleMarker } from 'react-leaflet'
-import { useState } from 'react'
 
 export default function Map() {
 
     const position = [49.28594, -123.11129];
-
     const purpleOption = { color: '#00355f' };
     const redOption = { color: 'red'};
 
